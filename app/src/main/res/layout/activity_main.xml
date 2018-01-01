@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="com.example.egi_fcb.firebase.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/firebase_icons"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="ADD DATA"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:id="@+id/bt_createdata"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="VIEW DATA"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:id="@+id/bt_viewdata"/>
+</LinearLayout>
