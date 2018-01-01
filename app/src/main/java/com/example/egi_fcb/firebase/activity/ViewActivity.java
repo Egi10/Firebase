@@ -5,12 +5,10 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
-import com.example.egi_fcb.firebase.MainActivity;
 import com.example.egi_fcb.firebase.R;
 import com.example.egi_fcb.firebase.adapter.AdapterViewBarang;
 import com.example.egi_fcb.firebase.model.Barang;

@@ -9,14 +9,12 @@
     android:layout_margin="20dp"
     tools:context="com.example.egi_fcb.firebase.activity.CreateActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:text="CREATE DATA"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="#000"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/upload"
+        android:id="@+id/image"
+        android:gravity="center"/>
 
     <EditText
         android:layout_width="match_parent"

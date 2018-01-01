@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Barang implements Serializable {
 
-    private String nama, merk, key;
+    private String nama, merk, key, urll;
     private int harga;
 
     public Barang(){
@@ -52,10 +52,15 @@ public class Barang implements Serializable {
         return " "+nama+"\n"+" "+merk+"\n"+" "+harga;
     }
 
-    public Barang (String id, String nm, String mrk, int hrg){
+    public String getUrll(){
+        return urll;
+    }
+
+    public Barang (String id, String nm, String mrk, int hrg, String url){
         key = id;
         nama = nm;
         merk = mrk;
         harga = hrg;
+        urll = url;
     }
 }

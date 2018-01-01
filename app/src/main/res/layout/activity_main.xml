@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context="com.example.egi_fcb.firebase.MainActivity">
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    tools:context="com.example.egi_fcb.firebase.activity.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="ADD DATA"
         android:background="@color/colorPrimary"
         android:textColor="#FFF"
@@ -27,10 +29,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="VIEW DATA"
         android:background="@color/colorPrimary"
         android:textColor="#FFF"
         android:textStyle="bold"
         android:id="@+id/bt_viewdata"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="LOGOUT"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:id="@+id/bt_logout"/>
 </LinearLayout>

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.egi_fcb.firebase.R;
 import com.example.egi_fcb.firebase.activity.EditActivity;
 import com.example.egi_fcb.firebase.model.Barang;
@@ -18,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by egi_fcb on 1/1/18.
@@ -46,6 +49,7 @@ public class AdapterViewBarang extends RecyclerView.Adapter<AdapterViewBarang.Re
         holder.tvNamaBarang.setText(barang.getNama());
         holder.tvMerkBarang.setText(barang.getMerk());
         holder.tvHargaBarang.setText(String.valueOf(barang.getHarga()));
+        Glide.with(context).load(barang.getUrll()).into(holder.imageView);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +75,7 @@ public class AdapterViewBarang extends RecyclerView.Adapter<AdapterViewBarang.Re
                         intent.putExtra("nama", daftarbarang.get(position).getNama());
                         intent.putExtra("merk", daftarbarang.get(position).getMerk());
                         intent.putExtra("harga", daftarbarang.get(position).getHarga());
+                        intent.putExtra("gambar", daftarbarang.get(position).getUrll());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                         v.getContext().startActivity(intent);
                     }
@@ -99,6 +104,7 @@ public class AdapterViewBarang extends RecyclerView.Adapter<AdapterViewBarang.Re
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
         TextView tvNamaBarang, tvMerkBarang, tvHargaBarang;
+        CircleImageView imageView;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
@@ -106,6 +112,7 @@ public class AdapterViewBarang extends RecyclerView.Adapter<AdapterViewBarang.Re
             tvNamaBarang = (TextView)itemView.findViewById(R.id.tv_namabarang);
             tvMerkBarang = (TextView)itemView.findViewById(R.id.tv_merkbarang);
             tvHargaBarang = (TextView)itemView.findViewById(R.id.tv_hargabarang);
+            imageView = (CircleImageView)itemView.findViewById(R.id.image);
         }
     }
 
